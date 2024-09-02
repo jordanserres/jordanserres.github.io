@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE>Jordan Serres' Home Page</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.4.1  (Unix)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20130914;18073700">
+	<!-- Page de garde simplifi&eacute;e -->
+	<script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  	</script>
+	<STYLE TYPE="text/css">
+	<!--
+		TD P { color: #000000 }
+		P { color: #000000 }
+		H2 { color: #000000 }
+		H2.ctl { font-family: "Arial Unicode MS" }
+		A:link { color: #0000ee }
+		A:visited { color: #551a8b }
+	-->
+	</STYLE>
+</HEAD>
+
+
+<BODY LANG="fr-FR" TEXT="#000000" LINK="#0000ee" VLINK="#551a8b" BGCOLOR=#FFFFFF DIR="LTR">
+
+
+<H1 CLASS="western">Research</H1>
+
+  <li><b><big><big>Spaces with curvature bounded below <br>
+  </big></big></b></li>
+
+<p style="width:900px">
+In a smooth space with a Riemannian structure, the Riemann curvature tensor is a mathematical object that measures how far the local geometry deviates from Euclidean geometry. By contracting the Riemann tensor, one gets the Ricci curvature tensor, which has become a central concept since the formulation of general relativity, and in particular the statement in Einstein's equation that the (trace-free) Ricci tensor of spacetime is equal to the stress-energy tensor.<br><br>
+
+The property for a space to have a Ricci tensor bounded below has many implications, including the Bishop-Gromov inequality, the local Poincaré inequality, the local doubling condition, the Cheeger-Gromoll splitting theorem, Myers's theorem, or the Lichnerowicz inequality.<br><br>
+
+Moreover, given some \(K\in\mathbb{R}\) and some \(N\in\mathbb{N}\), the class \(R_{K,N}\) of all Riemannian manifolds of dimension \(n\leq N\) having a Ricci tensor bonded below by \(K\), form a totally bounded space for the Gromov-Hausdorff topology. Since this topology does not assume the type of smoothness of the manifold structure, the search for the closure of \(R_{K,N}\) is in some way equivalent to the search for a synthetic notion of curvature bounded below, that is a notion that does not involve any differential manifold structure.<br><br>
+
+The broader candidate for the closure of \(R_{K,N}\) is the class of \(CD(K,N)\) spaces, which were defined by mean of optimal transport by Sturm [37-38] and Lott and Villani [27], as spaces having a geodesically convex entropy functional on the Wasserstein space \(W_2\). Note that the letters \(CD\) stand for Curvature-Dimension.<br><br>
+
+A more refined candidate for the closure of \(R_{K,N}\) is the class of \(RCD(K,N)\) spaces, which were defined by Ambrosio-Gigli-Savaré [2] as \(CD(K,N)\) spaces having a quadratic Cheeger energy. Note that here the letter \(R\) stands for Riemann.<br><br>
+
+Today, there is strong evidence that the class \(RCD(K,N)\) is the right way to look at the closure of \(R_{K,N}\), and this is due to the large amount of research successfully done to show that the good properties of manifolds in \(R_{K,N}\) are still true for \(RCD\) spaces. In particular, the Bishop-Gromov inequality and all theorems listed above remain true for \(RCD(K,N)\) spaces. The paper [BOS24] by Brunel, Ohta and Serres is part of this objective, generalizing Grünbaum's inequality, which is a classical result in the Minkowski theory of convex sets, to the setting of \(RCD(0,N)\) spaces.<br><br>
+
+A number of works in this direction have led to results that were even new in the smooth case, let us cite for instance the quantitative Obata's theorem by Cavalletti, Mondino and Semola [18], or the quantitative Lichnerowicz inequality by Fathi, Gentil and Serres [19].<br>
+
+For a very nice exposition on the topic of spaces with curvature bounded below, we refer the reader to Tewodrose's PhD thesis [41].<br><br>
+
+General relativity was the main starting point for the development of Ricci curvature theory, so it is natural to want to adapt the synthetic notion of curvature bounded below to the case of Lorentzian spaces. We refer the reader to Cavalletti and Mondino [17] for a review of this theory.<br><br>
+
+From the point of view of RCD spaces, the notions of space and volume are formalized in the axiomatic of metric measure spaces. It is possible to formalize those notions in a rather different manner by mean of Brownian motions. For more intuition about it, see Serres' thesis manuscript [32], Section 2.3. <br>
+
+This formalization by mean of Brownian motion corresponds to the definition of Dirichlet spaces, see [21], and allows the study of singular spaces such as fractals, see e.g. [3].<br>
+
+Dirichlet and RCD spaces are closely related. This is actually proved by Suzuki's deep result [40] stating that under the RCD condition, the pointed measure Gromov convergence is equivalent to the weak convergence of Brownian motions.
+
+</p>
+
+<li><b><big><big>Stein's method <br>
+ </big></big></b></li>
+  
+<p style="width:900px">
+Stein's method is a set of techniques extensively developed from the seminal paper [36] of Charles Stein in 1972. The aim of these techniques is to give quantitative bound for the distance between two probability measures. This method was introduced to quantify the asymptotic normality of certain statistical estimators, and proved extremely fruitful in mathematical statistics at a time when non-asymptotic bounds were establishing themselves as major theoretical guarantees for practical applications. We refer the reader to the survey by Ross [30] which remains the most cited survey on Stein's method. The heart of Stein's method consist in deriving inequalities of the following type: For all probability distributions \(\alpha\),
+\begin{equation}\label{eq:Steinlemm}
+W_1(\alpha,\gamma)\leq \underset{\underset{||f'||_\infty\leq \sqrt{\frac{2}{\pi}}}{||f||_\infty\leq 2}}{\sup}\left|\int f'(x)-xf(x)\, d\alpha\right|,  
+\end{equation} 
+where we denote by \(W_1\) the \(L^1\)-transport distance, and by \(\gamma\) the standard normal distribution. The second step is then to bound the supremum appearing in the RHS, and this is usually the most difficult part. The philosophy behind Stein's method is that a differential operator can characterize a probability distribution (here it is \(f\mapsto f'-xf\)) . This has led to the application of the method to a wide variety of probability distributions by means of differential operators generating Markov processes: This is the Barbour generator approach [4].<br><br>
+
+Stein's inequality presented above can also be seen as a transport cost inequality, and can therefore be paralleled with the Bobkov-Götze \(L^1\)-transport-cost inequality or Talagrand Inequality. Noticing this, Ledoux, Nourdin and Peccati [26] interpreted the supremum in as an entropy-like term they called the Stein discrepancy, and proved the HSI inequality improving Otto and Villani's famous HWI inequality [28] which connects the entropy, the Wasserstein-\(2\) distance and the Fisher information.<br><br>
+
+Following Courtade and Fathi's ideas [15], Stein's method can also be used to obtain stability results for functional inequalities. From this point of view, starting from the variational formulation of a functional inequality, we can write the Euler-Lagrange equation for extremizers, and then use it as a differential operator characterizing them. If all goes well, a stability result follows. This type of idea was used in the articles [34] stating stability results for the Poincaré constant of the reversible distribution of a diffusion process, [33] stating stability results for the eigenvalues of any order of a one-dimensional diffusion, and [19] stating a quantitative Lichnerowicz inequality in the framework of RCD spaces.
+</p>
+
+<li><b><big><big>Stability of functional inequalities <br>
+ </big></big></b></li>
+  
+<p style="width:900px">
+Given a functional inequality for which the extremums are known, the question of stability is: if a function almost saturates the inequality, is it close to the extremums? see e.g. [20]. The most famous example is perhaps that of the isoperimetric inequality: the extremizers are the balls, and the question of stability comes down to showing that the isoperimetric deficit controls a certain distance from the ball. In this case, the answer is yes, and is now well known: see, for example, Fusco's survey [22].<br><br>
+Note that the stability problem is an inverse problem, which aims to reconstruct the cause (by controlling its distance from the known extremizers) from knowledge of its effects (the deficit in the functional inequality). In particular, the problem of showing that if a solution is close to an extremizer, then its deficit is close to zero is not a stability problem, but rather a continuity problem.<br><br>
+
+Many functional inequalities exhibit stability, such as the Brunn-Minkowski inequality, the Faber-Krahn inequality or the Sobolev inequality, to name but a few.<br> In particular, the papers [19, 34] derive stability properties for the Poincaré constant, as the solution of a min-max variational problem, and the paper [33] derive a stability property for the improved Poincaré constants in dimension one. Note that, through the spectral interpretation of Poincaré's inequalities, the stability problem in this case can be seen as a relaxation of Kac's famous question: “Can one hear the shape of a drum?”. In particular, unlike Kac's question, this relaxed version admits a positive answer, as shown in the above-mentioned articles.
+</p>
+
+<li><b><big><big>Renormalization and the Polchinski flow <br>
+ </big></big></b></li>
+  
+<p style="width:900px">
+
+Renormalization first appeared in quantum field theory in the 1950s as a set of techniques for circumventing the appearance of infinite quantities in continuum models. Let's present it briefly through the \(\phi^4\) model. This model describes a random scalar field (i.e. function) on \(\mathbb{R}^d\), whose law is given by the formal Lagrangian
+\begin{equation}\label{phi4}
+\mathcal{L}=\mathcal{D}\phi\,\exp\left\{ -\frac{1}{2}|\nabla\phi|^2 - g(\phi^2-1)^2 \right\}
+\end{equation}
+where \(\mathcal{D}\phi\) denotes the Feynmann measure (which is not always well defined mathematically), and \(g>0\) is a coupling constant. Note that \(\mathcal{D}\phi\,\exp\left\{ -\frac{1}{2}|\nabla\phi|^2\right\}\) is the Lagrangian of the Gaussian free field, which is well defined, and hence the \(\phi^4\) model is defined as the distribution with density \(e^{-H(\phi)}\), \(H(\phi):=g(\phi^2-1)^2\), with respect to the Gaussian free field. The Lagrangian written above is the equilibrium distribution of the dissipative dynamics governed by the following stochastic partial differential equation:
+\begin{equation}\label{SPDE}
+\partial_t\phi_t = \Delta \phi_t -\nabla H (\phi_t) + \xi
+\end{equation}
+where \(\xi\) denotes a spacetime white noise. The presence of noise forces \(\phi\) to be a generalized function, so the term \(\nabla H(\phi_t)\sim \phi_t^3\) is not defined, which makes this SPDE singular. The renormalization procedure consists in subtracting divergent counterterms in order to isolate the non-singular part of the Lagrangian, which is the quantity with a physical meaning. Formally, one writes
+\begin{equation}\label{effectiveLagrangian}
+\mathcal{L} = \mathcal{D}\phi\,\exp\left\{ -\frac{1}{2}|\nabla\phi|^2 - g_{\mathrm{eff}}(\phi^2-1)^2 -\mathrm{counter terms} \right\},
+\end{equation}
+where the part \(-\frac{1}{2}|\nabla\phi|^2 - g_{\mathrm{eff}}(\phi^2-1)^2\) is the effective Lagrangian, with the effective coupling constant \(g_{\mathrm{eff}}\) which is an experimentally observable quantity. To date, the best mathematical theory for knowing in which cases such counterterms exist is Hairer's theory of regularity structures [23].<br><br>
+
+To name just a few important advances from the history of Physics, let us cite Kadanoff block spin Renormalization scheme [24] in statistical field theory, which consists in integrating \(\phi\) up to some energy scale, i.e. dividing \(\mathbb{R}^d\) in little blocs and integrating the fluctuations of \(\phi\) at the level of the size of the blocs. In Fourier space, this corresponds to integrating high fequencies. Later, K. Wilson [42], then Polchinski [29] reformulated this procedure as an infinite system of differential equations on the parameter space, thus presenting a semigroup structure, referred to as the renormalization group. Among the many technical difficulties is the fact that this procedure creates coupling parameters at all orders from the very first step. For example, whereas the \(\phi^4\) model only has coupling constants up to order \(4\), renormalization immediately produces further couplings at all orders.<br><br>
+
+The constructive approach is to replace the continuum \(\mathbb{R}^d\) by a discrete space given by a lattice \(L\mathbb{T}^d\cap\varepsilon\mathbb{Z}^d\), where \(\mathbb{T}^d\) denotes the torus of width \(L>0\) and \(\varepsilon>0\) is the energy cut-off, corresponding to the block size in Kadanoff's scheme. The continuum Lagrangian is then replaced by a well defined probability distribution on \(\mathbb{R}^K\) where \(K\) is the number of sites in the lattice. The idea is that all properties of the lattice model that are independent of \(\varepsilon\), are ipso-facto true for the continuum model.<br><br>
+
+Under this constructive formulation, it is possible to show that the continuum \(\phi^4\) model is Gaussian for all \(d\ge 4\) (the case \(d=4\) having recently been solved by Aizenmann and Duminil-Copin [1]), but is in fact non-Gaussian for \(d=2\) and \(d=3\). Note that the \(d=1\) case is also non-Gaussian, but is trivial in the sense that since the Gaussian free field is then a continuous function (this is Brownian motion), the equation defining the model is only a SDE and is therefore well understood.<br><br>
+
+For lattice models, the Lagrangian take the form 
+\[
+\nu_0(d\phi) \propto \gamma_{C_\infty}(d\phi)\exp(-V_0(\phi))
+\]
+where the centered Gaussian \(\gamma_{C_\infty}\) is the discrete Gaussian free field. Recently, Bauerschmidt and Bodineau [6] have performed a renormalization group procedure on such models by decomposing the covariance \(C_\infty\) at each order of fluctuations. The procedure then consists in disintegrating \(\nu_0\) into a renormalized part \(\nu_t\) and a fluctuation (random) part \(\mu_t^\varphi\).<br><br>
+
+Note that the renormalized measure corresponds to the effective part of the Lagrangian, and obeys a Hamilton-Jacobi equation that can be read directly as the exact equation of the Polchinki renormalization group. Bauerschmidt and Bodineau used it to decompose the entropy of the original measure \(\nu_0\) and state a generalized Bakry-Émery criterion, which enabled them to prove a logarithmic Sobolev inequality for the continuum two-dimensional sine-Gordon model. The same method also allows to prove a log-Sobolev inequality [7] for the \(\phi^4\) model in dimension \(2\) and \(3\). <br><br>
+
+Note that the fluctation measures \(\mu_t^\varphi\) are deeply connected with Eldan's stochastic localisation, which is a powerfull method to study convex analysis problems and to derive mixing bound for Markov chains, see [14].<br><br>
+
+The flow of renormalized measures \((\nu_t)_{t\ge 0}\), known as the Polchinski flow, is the dual version of the localization scheme and has the added benefit of being a generalization of the well-established Bakry-Émery theory. These reasons led to the introduction of a dynamic version of the \(\Gamma\)-calculus of Bakry-Émery theory to study the Polchinski flow. This is one of the aims of the article [35] inspired by and generalizing [25].
+</p>
+
+
+<li><b><big><big>Dynamical \(\Gamma\)-calculus <br>
+ </big></big></b></li>
+  
+<p style="width:900px">
+
+Bakry and Émery [8] introduced the \(\Gamma_2\) criterion as a sufficient condition to ensure the hypercontractivity of a Markov semigroup. This celebrated \(\Gamma\)-calculus introduced very powerful tools for studying properties of a Markov semigroup, such as logarithmic Sobolev inequalities, concentration of measure, mixing time etc. <br><br>
+
+The main ideas are as follows. Since what a Markov process does at the present moment depends solely on what it did at the very last moment, it follows that its future can be predicted (let's say stochastically) by knowledge of the process at an infinitesimal variation of time. The way in which the present can be predicted at the next instant is determined by the so-called infinitesimal generator. For the deterministic motion of a point, the infinitesimal generator would correspond to the velocity of that point.<br><br>
+
+In the case of a diffusion Markov process, i.e. one that propagates in space in the same way as heat diffuses in the material, the infinitesimal generator can be written as a second-order differential operator, taking the form
+\[
+\mathcal{L} = \sum_{i,j} a_{i,j}\,\partial_{i,j} + \sum_{i} b_i\,\partial_i.
+\]
+A natural thing to do with this second-order differential formula is to measure the extent to which it is first-order. Since it would be of first-order if, and only if, it would satisfies Leibniz rule of differentiation, one can measure it by the following operator
+\[
+\Gamma(f,g) = \frac{1}{2}\left[\mathcal{L}(fg) - f\mathcal{L} g - g\mathcal{L} f \right],
+\]
+which is called the carré du champ operator because it boils down to \(\Gamma(f,f)=|\nabla f|^2\) when \(a_{i,j}=\delta_{i,j}\), denoting \(\delta\) the Kronecker symbol. The carré du champ \(\Gamma(f,f)\) is a quadratic first-order operator which, in average with respect to the equilibrium distribution \(\mu\), is equal to \(-\mathcal{L}\):
+\[
+\int \Gamma(f,g)\,d\mu = -\int f\mathcal{L} g\,d\mu.
+\]
+So one may now want to measure the extent to which the carré du champ \(\Gamma\) commutes with the generator \(\mathcal{L}\) by defining
+\[
+\Gamma_2(f,g) = \frac{1}{2}\left[\mathcal{L}(\Gamma(f,g)) - \Gamma(f,\mathcal{L} g) - \Gamma(g,\mathcal{L} f) \right],
+\]
+which is simply called the operator \(\Gamma_2\). The miracle is that non-negative lower bounds on \(\Gamma_2\) have incredibly profound implications. This would not seem so mysterious, however, looking at Bochner's formula, linking \(\Gamma_2\) to the Ricci curvature tensor, and allowing the \(\Gamma_2\) criterion to be read as a lower bound on Ricci curvature, as was done in the seminal article [2]. <br><br>
+
+Note also that the fact that the \(\Gamma_2\) operator and the Ricci curvature tensor are related is not so surprising, since both are measures of a commutation defect: The first is the commutation defect between the carré du champ operator and the generator of a Markov process, the second is the commutation defect between the covariant derivative with respect to two vector fields.<br><br>
+
+What is generally referred to as \(\Gamma\)-calculus is a set of techniques aimed at showing stochastic, geometric or functional properties of a Markov diffusion using computable properties of the three objects defined above: \(\mathcal{L}\), \(\Gamma\) and \(\Gamma_2\). We refer the reader to [9] for a detailed presentation. <br><br>
+
+Among many other developments, these tools have been extended into integrated criteria to study the global properties of Markov processes [16], and they have also been extended to the study of hypocoercive diffusions [5].<br><br>
+
+A natural extension is to adapt the \(\Gamma\)-calculus to the context of a flow of probability distribution, in order to obtain some control over the dynamics of a functional inequality along the flow. Klartag and Putterman's work on the Poincaré constant along the heat flow [25] constitutes pioneering work in this vein. We should also mention the work of Roberto and Zegarlinski on the hypercontractivity in Orlicz spaces for non homogeneous diffusions [31]. <br><br>
+
+The paper [35] states and uses a dynamic \(\Gamma_2\) criterion which exactly boils down to the original Bakry-Émery criterion in the case of a static flow. Moreover, in the case of the Polchinski flow of renormalized distributions, this dynamic criterion boils down to Bauerschmidt and Bodineau's multiscale Bakry-Émery criterion [6].
+</p>
+
+
+<li><b><big><big>Statistical estimation in a geometric context <br>
+ </big></big></b></li>
+  
+<p style="width:900px">
+
+The most celebrated and perhap's the most intuitive statistical estimator is the empirical mean, given by the sum
+\[
+S_n=\frac{1}{n}\sum_{i=1}^n X_i
+\]
+for a data set \((X_1,\dots, X_n)\in \mathbb{R}^n\). One of the simplest properties of \(S_n\) is that it is linear in its arguments \(X_i\). Suppose, however, that instead of a linear data set in \(\mathbb{R}^n\), we need to estimate the mean of a data set \((X_1,\dots, X_n) \in \mathbb{M}^n\), where \(\mathbb{M}\) is a non-linear space. <br><br>
+This is the case, for example, with directional statistics, where the data \(X_i\) lie on the sphere, but it is also the case with dimensionality reduction, where an excessively large linear sample is replaced by a much smaller sample of non-linear data. One way for generalizing \(S_n\) to non-linear spaces is to remark that it is the least square estimator, that is, 
+\begin{equation}\label{leastsquare}
+S_n\in \underset{p\in\mathbb{M}}{\mathrm{argmin}} \sum_{i=1}^n d(p,X_i)^2.
+\end{equation}
+The problem of minimizing this last quantity actually makes sense in any metric space, and is known as the Fréchet mean. Its properties of consistency and asymptotic normality are deeply connected with upperbounds on the sectional curvature of the space, see [11,12].<br><br>
+
+An iterative way of approximating the minimizer of the least square problem can be performed by following a stochastic gradient type descent, as introduced by Sturm in [39], where it is shown that this inductive mean actually has good estimator properties in the case of nonpositive sectional curvature. This is actually due to the fact that nonpositive sectional curvature entails strong convexity of the squared distance to any point, therefore making the least square problem very tractable.<br><br>
+
+These properties were strenghtened by Brunel and Serres in the paper [13], where concentration bounds for both the Fréchet and the inductive means are proved under a sub-Gaussianity assumption.<br><br><br>
+</p>
+
+<li><b><big><big>Bibliography <br><br><br>
+ </big></big></b></li>
+
+<table style="width:900px">
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="aizenman2021marginal">1</a>]
+</td>
+<td class="bibtexitem">
+Michael Aizenman and Hugo Duminil-Copin.
+ Marginal triviality of the scaling limits of critical 4D Ising
+  and &phi;<sub>4</sub><sup>4</sup> models.
+ <em>Annals of Mathematics</em>, 194(1):163--235, 2021.
+[&nbsp;<a href="biblio_bib.html#aizenman2021marginal">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="AmbrosioGigliSavare">2</a>]
+</td>
+<td class="bibtexitem">
+Luigi Ambrosio, Nicola Gigli, and Giuseppe Savar&eacute;.
+ Bakry–Émery curvature-dimension condition and Riemannian Ricci
+  curvature bounds.
+ <em>The Annals of Probability</em>, 43(1):339 -- 404, 2015.
+[&nbsp;<a href="biblio_bib.html#AmbrosioGigliSavare">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="alonso2021besov">3</a>]
+</td>
+<td class="bibtexitem">
+Patricia Alonso-Ruiz, Fabrice Baudoin, Li&nbsp;Chen, Luke Rogers, Nageswari
+  Shanmugalingam, and Alexander Teplyaev.
+ Besov class via heat semigroup on Dirichlet spaces III: BV
+  functions and sub-Gaussian heat kernel estimates.
+ <em>Calculus of Variations and Partial Differential Equations</em>,
+  60(5):170, 2021.
+[&nbsp;<a href="biblio_bib.html#alonso2021besov">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="barbourdiffusion">4</a>]
+</td>
+<td class="bibtexitem">
+A.&nbsp;D. Barbour.
+ Stein's method for diffusion approximations.
+ <em>Probab. Theory Related Fields</em>, 84(3):297--322, 1990.
+[&nbsp;<a href="biblio_bib.html#barbourdiffusion">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1007/BF01197887">DOI</a>&nbsp;| 
+<a href="https://doi.org/10.1007/BF01197887">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="baudoin2017bakry">5</a>]
+</td>
+<td class="bibtexitem">
+Fabrice Baudoin.
+ Bakry-Émery meet Villani.
+ <em>Journal of functional analysis</em>, 273(7):2275--2291, 2017.
+[&nbsp;<a href="biblio_bib.html#baudoin2017bakry">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="bauerschmidt2021log">6</a>]
+</td>
+<td class="bibtexitem">
+Roland Bauerschmidt and Thierry Bodineau.
+ Log-Sobolev inequality for the continuum sine-Gordon model.
+ <em>Communications on Pure and Applied Mathematics</em>,
+  74(10):2064--2113, 2021.
+[&nbsp;<a href="biblio_bib.html#bauerschmidt2021log">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="bauerschmidt2022log">7</a>]
+</td>
+<td class="bibtexitem">
+Roland Bauerschmidt and Benoit Dagallier.
+ Log-Sobolev inequality for the &phi;<sub>2</sub><sup>4</sup>, and &phi;<sub>3</sub><sup>4</sup> 
+  measures.
+ <em>Communications on Pure and Applied Mathematics</em>, 2022.
+[&nbsp;<a href="biblio_bib.html#bauerschmidt2022log">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="bakryEmerydiffusions">8</a>]
+</td>
+<td class="bibtexitem">
+Dominique Bakry and Michel &Eacute;mery.
+ Diffusions hypercontractives.
+ <em>S&eacute;minaire de probabilit&eacute;s de Strasbourg</em>, 19:177--206, 1985.
+[&nbsp;<a href="biblio_bib.html#bakryEmerydiffusions">bib</a>&nbsp;| 
+<a href="http://www.numdam.org/item/SPS_1985__19__177_0/">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="BGL">9</a>]
+</td>
+<td class="bibtexitem">
+Dominique Bakry, Ivan Gentil, and Michel Ledoux.
+ <em>Analysis and geometry of Markov diffusion operators</em>, volume
+  103.
+ Springer, 2014.
+[&nbsp;<a href="biblio_bib.html#BGL">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="BOS24">10</a>]
+</td>
+<td class="bibtexitem">
+Victor-Emmanuel Brunel, Shin-ichi Ohta, and Jordan Serres.
+ A generalization of Grünbaum's inequality in RCD(0,N)-spaces.
+ <em>arXiv preprint arXiv:2408.15030</em>, 2024.
+[&nbsp;<a href="biblio_bib.html#BOS24">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="bhattacharya2003large">11</a>]
+</td>
+<td class="bibtexitem">
+Rabi Bhattacharya and Vic Patrangenaru.
+ Large sample theory of intrinsic and extrinsic sample means on
+  manifolds.
+ <em>The Annals of Statistics</em>, 31(1):1--29, 2003.
+[&nbsp;<a href="biblio_bib.html#bhattacharya2003large">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="bhattacharya2003largeII">12</a>]
+</td>
+<td class="bibtexitem">
+Rabi Bhattacharya and Vic Patrangenaru.
+ Large sample theory of intrinsic and extrinsic sample means on
+  manifolds—II.
+ <em>The Annals of Statistics</em>, 33(3):1225 -- 1259, 2005.
+[&nbsp;<a href="biblio_bib.html#bhattacharya2003largeII">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1214/009053605000000093">DOI</a>&nbsp;| 
+<a href="https://doi.org/10.1214/009053605000000093">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="BS24">13</a>]
+</td>
+<td class="bibtexitem">
+Victor-Emmanuel Brunel and Jordan Serres.
+ Concentration of empirical barycenters in metric spaces.
+ In <em>Proceedings of The 35th International Conference on
+  Algorithmic Learning Theory</em>, volume 237 of <em>Proceedings of Machine
+  Learning Research</em>, pages 337--361. PMLR, 25--28 Feb 2024.
+[&nbsp;<a href="biblio_bib.html#BS24">bib</a>&nbsp;| 
+<a href="https://proceedings.mlr.press/v237/brunel24a/brunel24a.pdf">.pdf</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="chen2022localization">14</a>]
+</td>
+<td class="bibtexitem">
+Yuansi Chen and Ronen Eldan.
+ Localization schemes: A framework for proving mixing bounds for
+  Markov chains.
+ In <em>2022 IEEE 63rd Annual Symposium on Foundations of Computer
+  Science (FOCS)</em>, pages 110--122. IEEE, 2022.
+[&nbsp;<a href="biblio_bib.html#chen2022localization">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="CF">15</a>]
+</td>
+<td class="bibtexitem">
+Thomas&nbsp;A. Courtade and Max Fathi.
+ Stability of the Bakry-&Eacute;mery theorem on <em>R</em><sup>n</sup>.
+ <em>J. Funct. Anal.</em>, 279(2):108523, 28, 2020.
+[&nbsp;<a href="biblio_bib.html#CF">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1016/j.jfa.2020.108523">DOI</a>&nbsp;| 
+<a href="https://doi.org/10.1016/j.jfa.2020.108523">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="cattiaux2023journey">16</a>]
+</td>
+<td class="bibtexitem">
+Patrick Cattiaux and Arnaud Guillin.
+ A journey with the integrated &gamma;<sub>2</sub> criterion and its weak
+  forms.
+ In <em>Geometric Aspects of Functional Analysis: Israel Seminar
+  (GAFA) 2020-2022</em>, pages 167--208. Springer, 2023.
+[&nbsp;<a href="biblio_bib.html#cattiaux2023journey">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="cavalletti2022review">17</a>]
+</td>
+<td class="bibtexitem">
+Fabio Cavalletti and Andrea Mondino.
+ A review of Lorentzian synthetic theory of timelike Ricci
+  curvature bounds.
+ <em>General Relativity and Gravitation</em>, 54(11):137, 2022.
+[&nbsp;<a href="biblio_bib.html#cavalletti2022review">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="cavalletti2023quantitativeObata">18</a>]
+</td>
+<td class="bibtexitem">
+Fabio Cavalletti, Andrea Mondino, and Daniele Semola.
+ Quantitative Obata’s theorem.
+ <em>Analysis &amp; PDE</em>, 16(6):1389--1431, 2023.
+[&nbsp;<a href="biblio_bib.html#cavalletti2023quantitativeObata">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="fathi2022stability">19</a>]
+</td>
+<td class="bibtexitem">
+Max Fathi, Ivan Gentil, and Jordan Serres.
+ Stability estimates for the sharp spectral gap bound under a
+  curvature-dimension condition.
+ <em>To appear in Annales de l'Institut Fourier</em>, 2022.
+[&nbsp;<a href="biblio_bib.html#fathi2022stability">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="figalli2013stability">20</a>]
+</td>
+<td class="bibtexitem">
+Alessio Figalli.
+ Stability in geometric and functional inequalities.
+ In <em>European congress of mathematics</em>, pages 585--599. Citeseer,
+  2013.
+[&nbsp;<a href="biblio_bib.html#figalli2013stability">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="fukushima2011dirichlet">21</a>]
+</td>
+<td class="bibtexitem">
+Masatoshi Fukushima, Yoichi Oshima, and Masayoshi Takeda.
+ <em>Dirichlet forms and symmetric Markov processes</em>, volume&nbsp;19.
+ Walter de Gruyter, 2011.
+[&nbsp;<a href="biblio_bib.html#fukushima2011dirichlet">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="fusco2015surveyisop">22</a>]
+</td>
+<td class="bibtexitem">
+Nicola Fusco.
+ The quantitative isoperimetric inequality and related topics.
+ <em>Bulletin of Mathematical Sciences</em>, 5:517--607, 2015.
+[&nbsp;<a href="biblio_bib.html#fusco2015surveyisop">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="hairer2014theory">23</a>]
+</td>
+<td class="bibtexitem">
+Martin Hairer.
+ A theory of regularity structures.
+ <em>Inventiones mathematicae</em>, 198(2):269--504, 2014.
+[&nbsp;<a href="biblio_bib.html#hairer2014theory">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="kadanoff1966scaling">24</a>]
+</td>
+<td class="bibtexitem">
+Leo&nbsp;P Kadanoff.
+ Scaling laws for ising models near t c.
+ <em>Physics Physique Fizika</em>, 2(6):263, 1966.
+[&nbsp;<a href="biblio_bib.html#kadanoff1966scaling">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="klartagputterman">25</a>]
+</td>
+<td class="bibtexitem">
+Bo'az Klartag and Eli Putterman.
+ Spectral monotonicity under Gaussian convolution.
+ <em>Annales de la Facult&eacute; des sciences de Toulouse :
+  Mathématiques</em>, Ser. 6, 32(5):939--967, 2023.
+[&nbsp;<a href="biblio_bib.html#klartagputterman">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.5802/afst.1759">DOI</a>&nbsp;| 
+<a href="https://afst.centre-mersenne.org/articles/10.5802/afst.1759/">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="LNP">26</a>]
+</td>
+<td class="bibtexitem">
+Michel Ledoux, Ivan Nourdin, and Giovanni Peccati.
+ Stein's method, logarithmic Sobolev and transport inequalities.
+ <em>Geom. Funct. Anal.</em>, 25(1):256--306, 2015.
+[&nbsp;<a href="biblio_bib.html#LNP">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1007/s00039-015-0312-0">DOI</a>&nbsp;| 
+<a href="https://doi.org/10.1007/s00039-015-0312-0">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="lott2009ricci">27</a>]
+</td>
+<td class="bibtexitem">
+John Lott and C&eacute;dric Villani.
+ Ricci curvature for metric-measure spaces via optimal transport.
+ <em>Annals of Mathematics</em>, pages 903--991, 2009.
+[&nbsp;<a href="biblio_bib.html#lott2009ricci">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="ottovillani2000">28</a>]
+</td>
+<td class="bibtexitem">
+Felix Otto and C&eacute;dric Villani.
+ Generalization of an inequality by Talagrand and links with the
+  logarithmic Sobolev inequality.
+ <em>Journal of Functional Analysis</em>, 173(2):361--400, 2000.
+[&nbsp;<a href="biblio_bib.html#ottovillani2000">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="polchinski1984renormalization">29</a>]
+</td>
+<td class="bibtexitem">
+Joseph Polchinski.
+ Renormalization and effective Lagrangians.
+ <em>Nuclear Physics B</em>, 231(2):269--295, 1984.
+[&nbsp;<a href="biblio_bib.html#polchinski1984renormalization">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="fundamStein">30</a>]
+</td>
+<td class="bibtexitem">
+Nathan Ross.
+ Fundamentals of Stein's method.
+ <em>Probab. Surv.</em>, 8:210--293, 2011.
+[&nbsp;<a href="biblio_bib.html#fundamStein">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1214/11-PS182">DOI</a>&nbsp;| 
+<a href="https://doi.org/10.1214/11-PS182">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="roberto2022hypercontractivity">31</a>]
+</td>
+<td class="bibtexitem">
+C&nbsp;Roberto and B&nbsp;Zegarlinski.
+ Hypercontractivity for markov semi-groups.
+ <em>Journal of Functional Analysis</em>, 282(12):109439, 2022.
+[&nbsp;<a href="biblio_bib.html#roberto2022hypercontractivity">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="serresphD">32</a>]
+</td>
+<td class="bibtexitem">
+Jordan Serres.
+ <em>Around stability for functional inequalities</em>.
+ PhD thesis, Universit&eacute; Paul Sabatier-Toulouse III, 2022.
+[&nbsp;<a href="biblio_bib.html#serresphD">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="serres2023stabilityhigh">33</a>]
+</td>
+<td class="bibtexitem">
+Jordan Serres.
+ Stability of higher order eigenvalues in dimension one.
+ <em>Stochastic Processes and their Applications</em>, 155:459--484,
+  2023.
+[&nbsp;<a href="biblio_bib.html#serres2023stabilityhigh">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="jordan2023stability">34</a>]
+</td>
+<td class="bibtexitem">
+Jordan Serres.
+ Stability of the Poincaré constant.
+ <em>Bernoulli</em>, 29(2):1297--1320, 2023.
+[&nbsp;<a href="biblio_bib.html#jordan2023stability">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="serresPolchinski">35</a>]
+</td>
+<td class="bibtexitem">
+Jordan Serres.
+ Behavior of the poincaré constant along the polchinski
+  renormalization flow.
+ <em>Communications in Contemporary Mathematics</em>, 26(07):2350035,
+  2024.
+[&nbsp;<a href="biblio_bib.html#serresPolchinski">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1142/S0219199723500359">DOI</a>&nbsp;| 
+<a href="http://arxiv.org/abs/https://doi.org/10.1142/S0219199723500359">arXiv</a>&nbsp;| 
+<a href="https://doi.org/10.1142/S0219199723500359">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="Stein72">36</a>]
+</td>
+<td class="bibtexitem">
+Charles Stein.
+ A bound for the error in the normal approximation to the distribution
+  of a sum of dependent random variables.
+ In <em>Proceedings of the Sixth Berkeley Symposium on
+  Mathematical Statistics and Probability , Vol. II: Probability
+  theory</em>, pages 583--602, 1972.
+[&nbsp;<a href="biblio_bib.html#Stein72">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="SturmI">37</a>]
+</td>
+<td class="bibtexitem">
+Karl-Theodor Sturm.
+ On the geometry of metric measure spaces. I.
+ <em>Acta Mathematica</em>, 196(1):65 -- 131, 2006.
+[&nbsp;<a href="biblio_bib.html#SturmI">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="SturmII">38</a>]
+</td>
+<td class="bibtexitem">
+Karl-Theodor Sturm.
+ On the geometry of metric measure spaces. II.
+ <em>Acta Mathematica</em>, 196(1):133 -- 177, 2006.
+[&nbsp;<a href="biblio_bib.html#SturmII">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="sturm2003probability">39</a>]
+</td>
+<td class="bibtexitem">
+Karl-Theodor Sturm.
+ Probability measures on metric spaces of nonpositive.
+ <em>Heat kernels and analysis on manifolds, graphs, and metric
+  spaces</em>, 338:357, 2003.
+[&nbsp;<a href="biblio_bib.html#sturm2003probability">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="Suzuki19">40</a>]
+</td>
+<td class="bibtexitem">
+Kohei Suzuki.
+ Convergence of Brownian motions on metric measure spaces under
+  Riemannian Curvature–Dimension conditions.
+ <em>Electronic Journal of Probability</em>, 24(none):1 -- 36, 2019.
+[&nbsp;<a href="biblio_bib.html#Suzuki19">bib</a>&nbsp;| 
+<a href="http://dx.doi.org/10.1214/19-EJP346">DOI</a>&nbsp;| 
+<a href="https://doi.org/10.1214/19-EJP346">http</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="tewodrose2018some">41</a>]
+</td>
+<td class="bibtexitem">
+David Tewodrose.
+ <em>Some functional inequalities and spectral properties of metric
+  measure spaces with curvature bounded below</em>.
+ PhD thesis, Universit&eacute; Paris sciences et lettres; Scuola normale
+  superiore (Pise, Italie), 2018.
+[&nbsp;<a href="biblio_bib.html#tewodrose2018some">bib</a>&nbsp;]
+
+</td>
+</tr>
+
+
+<tr valign="top">
+<td align="right" class="bibtexnumber">
+[<a name="wilson1971renormalization">42</a>]
+</td>
+<td class="bibtexitem">
+Kenneth&nbsp;G Wilson.
+ Renormalization group and critical phenomena. I. Renormalization
+  group and the Kadanoff scaling picture.
+ <em>Physical review B</em>, 4(9):3174, 1971.
+[&nbsp;<a href="biblio_bib.html#wilson1971renormalization">bib</a>&nbsp;]
+
+</td>
+</tr>
+</table><hr>
+
+
+</body>
+</html>
+
+
