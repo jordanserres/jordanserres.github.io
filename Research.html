@@ -172,7 +172,7 @@ The most celebrated and perhap's the most intuitive statistical estimator is the
 \[
 S_n=\frac{1}{n}\sum_{i=1}^n X_i
 \]
-for a data set \((X_1,\dots, X_n)\in \mathbb{R}^n\). One of the simplest properties of \(S_n\) is that it is linear in its arguments \(X_i\). Suppose, however, that instead of a linear data set in \(\mathbb{R}^n\), we need to estimate the mean of a data set \((X_1,\dots, X_n) \in \mathbb{M}^n\), where \(\mathbb{M}\) is a non-linear space. <br><br>
+for a data set \((X_1,\dots, X_n)\in \left(\mathbb{R}^p\right)^n\). One of the simplest properties of \(S_n\) is that it is linear in its arguments \(X_i\). Suppose, however, that instead of a linear data set in \(\mathbb{R}^p\), we need to estimate the mean of a data set \((X_1,\dots, X_n) \in \mathbb{M}^n\), where \(\mathbb{M}\) is a non-linear space. <br><br>
 This is the case, for example, with directional statistics, where the data \(X_i\) lie on the sphere, but it is also the case with dimensionality reduction, where an excessively large linear sample is replaced by a much smaller sample of non-linear data. One way for generalizing \(S_n\) to non-linear spaces is to remark that it is the least square estimator, that is, 
 \begin{equation}\label{leastsquare}
 S_n\in \underset{p\in\mathbb{M}}{\mathrm{argmin}} \sum_{i=1}^n d(p,X_i)^2.
