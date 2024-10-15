@@ -92,7 +92,7 @@ Many functional inequalities exhibit stability, such as the Brunn-Minkowski ineq
 
 Renormalization first appeared in quantum field theory in the 1950s as a set of techniques for circumventing the appearance of infinite quantities in continuum models. Let's present it briefly through the \(\phi^4\) model. This model describes a random scalar field (i.e. function) on \(\mathbb{R}^d\), whose law is given by the formal Lagrangian
 \begin{equation}\label{phi4}
-\mathcal{L}=\mathcal{D}\phi\,\exp\left\{ -\frac{1}{2}|\nabla\phi|^2 - g(\phi^2-1)^2 \right\}
+\mathcal{L}=\mathcal{D}\phi\,\exp\left\{ -\int_{\mathbb{R}^d} dx\left[\frac{1}{2}|\nabla\phi(x)|^2 + g(\phi(x)^2-1)^2 \right] \right\}
 \end{equation}
 where \(\mathcal{D}\phi\) denotes the Feynmann measure (which is not always well defined mathematically), and \(g>0\) is a coupling constant. Note that \(\mathcal{D}\phi\,\exp\left\{ -\frac{1}{2}|\nabla\phi|^2\right\}\) is the Lagrangian of the Gaussian free field, which is well defined, and hence the \(\phi^4\) model is defined as the distribution with density \(e^{-H(\phi)}\), \(H(\phi):=g(\phi^2-1)^2\), with respect to the Gaussian free field. The Lagrangian written above is the equilibrium distribution of the dissipative dynamics governed by the following stochastic partial differential equation:
 \begin{equation}\label{SPDE}
@@ -100,7 +100,7 @@ where \(\mathcal{D}\phi\) denotes the Feynmann measure (which is not always well
 \end{equation}
 where \(\xi\) denotes a spacetime white noise. The presence of noise forces \(\phi\) to be a generalized function, so the term \(\nabla H(\phi_t)\sim \phi_t^3\) is not defined, which makes this SPDE singular. The renormalization procedure consists in subtracting divergent counterterms in order to isolate the non-singular part of the Lagrangian, which is the quantity with a physical meaning. Formally, one writes
 \begin{equation}\label{effectiveLagrangian}
-\mathcal{L} = \mathcal{D}\phi\,\exp\left\{ -\frac{1}{2}|\nabla\phi|^2 - g_{\mathrm{eff}}(\phi^2-1)^2 -\mathrm{counter terms} \right\},
+\mathcal{L} = \mathcal{D}\phi\,\exp\left\{-\int_{\mathbb{R}^d} dx\left[\frac{1}{2}|\nabla\phi(x)|^2 + g_{eff}(\phi(x)^2-1)^2 \right]  -\mathrm{counter terms} \right\},
 \end{equation}
 where the part \(-\frac{1}{2}|\nabla\phi|^2 - g_{\mathrm{eff}}(\phi^2-1)^2\) is the effective Lagrangian, with the effective coupling constant \(g_{\mathrm{eff}}\) which is an experimentally observable quantity. To date, the best mathematical theory for knowing in which cases such counterterms exist is Hairer's theory of regularity structures [23].<br><br>
 
